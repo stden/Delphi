@@ -84,7 +84,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="L8Unit.pas">
-            <Form>Form1</Form>
+            <Form>L8Form</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
