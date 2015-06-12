@@ -2,7 +2,7 @@ object L9Form: TL9Form
   Left = 0
   Top = 0
   Caption = #1052#1085#1086#1075#1086#1084#1077#1088#1085#1099#1077' '#1084#1072#1089#1089#1080#1074#1099
-  ClientHeight = 481
+  ClientHeight = 495
   ClientWidth = 729
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,7 +13,7 @@ object L9Form: TL9Form
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 16
-  object Result1: TLabel
+  object Res: TLabel
     Left = 24
     Top = 333
     Width = 198
@@ -47,7 +47,7 @@ object L9Form: TL9Form
     Height = 44
     Caption = #1042#1099#1095#1080#1089#1083#1080#1090#1100
     Enabled = False
-    Kind = bkOK
+    Kind = bkAll
     NumGlyphs = 2
     TabOrder = 0
     WordWrap = True
@@ -71,7 +71,7 @@ object L9Form: TL9Form
     MaxValue = 10000
     MinValue = 2
     TabOrder = 2
-    Value = 3
+    Value = 4
   end
   object StringGrid1: TStringGrid
     Left = 24
@@ -91,11 +91,13 @@ object L9Form: TL9Form
     Visible = False
   end
   object Variant: TRadioGroup
-    Left = 376
+    Left = 384
     Top = 8
     Width = 337
     Height = 449
+    Hint = #1042#1099#1073#1077#1088#1080#1090#1077' '#1074#1072#1088#1080#1072#1085#1090
     Caption = #1042#1072#1088#1080#1072#1085#1090#1099
+    ItemIndex = 2
     Items.Strings = (
       '1. '#1059#1084#1085#1086#1078#1080#1090#1100' '#1101#1083#1077#1084#1077#1085#1090#1099' 1-'#1086#1081' '#1089#1090#1088#1086#1082#1080' '#1080' 1-'#1075#1086' '#1089#1090#1086#1083#1073#1094#1072' '#1085#1072' '#1082#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       '2. '#1053#1072#1081#1090#1080' '#1089#1091#1084#1084#1099' '#1101#1083#1077#1084#1077#1085#1090#1086#1074' '#1082#1072#1078#1076#1086#1081' '#1089#1090#1088#1086#1082#1080' '#1080' '#1074#1089#1077#1093' '#1101#1083#1077#1084#1077#1085#1090#1086#1074
@@ -129,5 +131,41 @@ object L9Form: TL9Form
     EditLabel.Caption = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090':'
     TabOrder = 6
     Text = '1.5'
+  end
+  object SaveBtn: TBitBtn
+    Left = 424
+    Top = 462
+    Width = 130
+    Height = 25
+    Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
+    Kind = bkAll
+    NumGlyphs = 2
+    TabOrder = 7
+    OnClick = SaveBtnClick
+  end
+  object LoadBtn: TBitBtn
+    Left = 568
+    Top = 462
+    Width = 129
+    Height = 25
+    Caption = #1047#1072#1075#1088#1091#1079#1080#1090#1100
+    Kind = bkOK
+    NumGlyphs = 2
+    TabOrder = 8
+    OnClick = LoadBtnClick
+  end
+  object OpenDialog: TOpenTextFileDialog
+    DefaultExt = 'txt'
+    Filter = #1058#1077#1082#1089#1090#1086#1074#1099#1077' '#1092#1072#1081#1083#1099'|*.txt'
+    EncodingIndex = 4
+    Left = 288
+    Top = 360
+  end
+  object SaveDialog: TSaveTextFileDialog
+    DefaultExt = 'txt'
+    Filter = #1058#1077#1082#1089#1090#1086#1074#1099#1077' '#1092#1072#1081#1083#1099'|*.txt'
+    EncodingIndex = 4
+    Left = 288
+    Top = 416
   end
 end
