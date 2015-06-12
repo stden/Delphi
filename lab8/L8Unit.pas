@@ -23,6 +23,7 @@ type
     RadioButton3: TRadioButton;
     RadioButton4: TRadioButton;
     RadioButton5: TRadioButton;
+    RadioButton6: TRadioButton;
     procedure SortButtonClick(Sender: TObject);
     procedure CalcClick(Sender: TObject);
   private
@@ -147,7 +148,23 @@ begin
     Result.Caption := 'Сумма: ' + IntToStr(Sum) + #13' Количество ' +
       IntToStr(nx) + #13'Среднее арифметическое: ' + FloatToStr(Sum / nx);
   end;
-
+  if RadioButton6.Checked then
+  begin
+    Result.Caption := '';
+    for i := 0 to High(A) do
+    begin
+      // Если элемент чётный
+      if A[i] mod 2 = 0 then
+      begin
+        A[i] := A[i] * 5; // Умножаем элемент не число
+        Count := Count + 1; // Считаем его
+        // И чётные выводим в Caption
+        Result.Caption := Result.Caption + 'A[' + IntToStr(i + 1) + ']=' +
+          IntToStr(A[i]) + #13;
+      end;
+    end;
+  end;
+  SetLength(A, 0); // Освобождаем память
 end;
 
 procedure TL8Form.SortButtonClick(Sender: TObject);
