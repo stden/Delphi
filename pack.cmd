@@ -1,0 +1,1 @@
+git archive -o labs.zip HEAD
